@@ -12,13 +12,12 @@ exports.verificaToken = function(req, res, next) {
                 errors: error
             });
         }
+        next();
 
-        //next();
-
-        return res.status(200).json({
-            ok: true,
-            decoded: decoded
-        });
+        // return res.status(200).json({
+        //     ok: true,
+        //     decoded: decoded
+        // });
     });
 
 
